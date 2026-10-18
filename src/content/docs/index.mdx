@@ -1,18 +1,18 @@
 ---
-title: Welcome to Starlight
-description: Get started building your docs site with Starlight.
+title: Memo
+description: The Open Source Grok Bot Alternative
 template: splash # Remove or comment out this line to display the site sidebar on this page.
 hero:
-  tagline: Congrats on setting up a new Starlight project!
+  tagline: Bots for your team.
   image:
-    file: ../../assets/houston.webp
+    file: ../../assets/icon.png
   actions:
-    - text: Example Guide
-      link: /guides/example/
+    - text: Install Now
+      link: /get-started/installation
       icon: right-arrow
-    - text: Read the Starlight docs
-      link: https://starlight.astro.build
-      icon: external
+    - text: Github 	
+      link: https://github.com/jsah-mc/memo
+      icon: github
       variant: minimal
 ---
 
@@ -21,20 +21,13 @@ import { Card, CardGrid } from '@astrojs/starlight/components';
 ## Next steps
 
 <CardGrid stagger>
-	<Card title="Update content" icon="pencil">
-		Edit `src/content/docs/index.mdx` to see this page change.
+	<Card title="AI Agents You already have" icon="external">
+		Install the cli for your agent and use them in Memo. Supported agents inside Docs!
 	</Card>
-	<Card title="Change page layout" icon="document">
-		Delete `template: splash` in `src/content/docs/index.mdx` to display a
-		sidebar on this page.
+	<Card title="Choose where the computer lives" icon="desktop">
+		Install Memo desktop container on your computer or on vps. Memo can also use your own computer.
 	</Card>
-	<Card title="Add new content" icon="add-document">
-		Add Markdown or MDX files to `src/content/docs` to create new pages.
-	</Card>
-	<Card title="Configure your site" icon="setting">
-		Edit your `sidebar` and other config in `astro.config.mjs`.
-	</Card>
-	<Card title="Read the docs" icon="open-book">
-		Learn more in [the Starlight Docs](https://starlight.astro.build/).
+	<Card title="Local models too!" icon="download">
+		Ollama, Hermes and LM Studio are supported.
 	</Card>
 </CardGrid>

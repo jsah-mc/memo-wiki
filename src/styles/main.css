@@ -1,0 +1,226 @@
+:root {
+  --sl-color-accent-low: #1a1a1a;
+  --sl-color-accent: #ffffff;
+  --sl-color-accent-high: #ffffff;
+  --sl-color-white: #ffffff;
+  --sl-color-gray-1: #f2f2f2;
+  --sl-color-gray-2: #cccccc;
+  --sl-color-gray-3: #999999;
+  --sl-color-gray-4: #666666;
+  --sl-color-gray-5: #3a5045;
+  --sl-color-gray-6: #000;
+  --sl-color-black: #000000;
+  --sl-color-bg: #000000;
+  --sl-color-bg-nav: #000;
+  --sl-color-bg-sidebar: #000;
+  --sl-color-text: #f2f2f2;
+  --sl-color-hairline: rgba(255, 255, 255, 0.3);
+  --sl-border-radius: 0;
+  --sl-font: 'SFMono-Regular', 'Consolas', 'Liberation Mono', 'Menlo', monospace;
+  --sl-font-system: 'SFMono-Regular', 'Consolas', 'Liberation Mono', 'Menlo', monospace;
+}
+
+:root[data-theme='light'] {
+  --sl-color-accent-low: #f0f0f0;
+  --sl-color-accent: #000000;
+  --sl-color-accent-high: #000000;
+  --sl-color-white: #101010;
+  --sl-color-gray-1: #171717;
+  --sl-color-gray-2: #303030;
+  --sl-color-gray-3: #5a5a5a;
+  --sl-color-gray-4: #7a7a7a;
+  --sl-color-gray-5: #d8d8d8;
+  --sl-color-gray-6: #eeeeee;
+  --sl-color-black: #ffffff;
+  --sl-color-bg: #ffffff;
+  --sl-color-bg-nav: #ffffff;
+  --sl-color-bg-sidebar: #fafafa;
+  --sl-color-text: #171717;
+  --sl-color-hairline: rgba(0, 0, 0, 0.22);
+}
+
+html,
+body,
+input,
+button,
+textarea,
+select {
+  font-family: var(--sl-font) !important;
+}
+
+html {
+  background: var(--sl-color-bg);
+}
+
+body {
+  background: var(--sl-color-bg);
+  color: var(--sl-color-text);
+  letter-spacing: 0.01em;
+  overflow-x: hidden;
+}
+
+/* The landing page is intentionally chrome-free. */
+html[data-has-hero] .header {
+  display: none;
+}
+
+::selection {
+  background: var(--sl-color-accent);
+  color: #000000;
+}
+
+/* Keep borders only on interactive or code surfaces. */
+.search-panel,
+.pagination-links a,
+.tablist,
+code,
+pre {
+  border: 1px solid var(--sl-color-hairline) !important;
+  box-shadow: none;
+}
+
+.site-title,
+.header {
+  background: color-mix(in srgb, var(--sl-color-bg-nav) 94%, transparent) !important;
+  backdrop-filter: blur(8px);
+}
+
+.site-title {
+  border-radius: 0 !important;
+}
+
+.site-title a,
+.sidebar a,
+.content a,
+.right-sidebar a,
+.pagination-links a {
+  color: var(--sl-color-accent) !important;
+  text-decoration: none;
+}
+
+.sidebar a[aria-current='page'] {
+  color: #000000 !important;
+}
+
+.site-title a:hover,
+.sidebar a:hover,
+.content a:hover,
+.right-sidebar a:hover,
+.pagination-links a:hover {
+  color: var(--sl-color-accent-high) !important;
+  text-decoration: underline;
+}
+
+.sidebar-pane,
+.content-panel,
+.right-sidebar-panel {
+  background: color-mix(in srgb, var(--sl-color-bg-sidebar) 92%, transparent) !important;
+}
+
+.main-frame,
+.page,
+.sl-container,
+.content-panel,
+.page-content {
+  background: transparent !important;
+  min-width: 0;
+}
+
+.sl-markdown-content {
+  background: color-mix(in srgb, var(--sl-color-bg) 88%, var(--sl-color-accent-low))
+;
+  padding: 1.5rem 1.75rem;
+  border-radius: 0 !important;
+}
+
+.sl-markdown-content h1,
+.sl-markdown-content h2,
+.sl-markdown-content h3,
+.sl-markdown-content h4,
+.sl-markdown-content h5,
+.sl-markdown-content h6 {
+  color: var(--sl-color-accent-high);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: lowercase;
+}
+
+.sl-markdown-content p,
+.sl-markdown-content li,
+.sl-markdown-content td,
+.sl-markdown-content th {
+  color: var(--sl-color-gray-1);
+}
+
+code,
+pre,
+.astro-code {
+  background: color-mix(in srgb, var(--sl-color-bg) 88%, var(--sl-color-accent-low)) !important;
+  color: var(--sl-color-accent-high) !important;
+  border-radius: 0 !important;
+  font-family: 'SFMono-Regular', 'Consolas', 'Liberation Mono', 'Menlo', monospace !important;
+}
+
+pre {
+  padding: 1rem 1.25rem !important;
+}
+
+blockquote {
+  background: rgba(126, 247, 174, 0.03);
+  padding: 0.85rem 1rem;
+  color: var(--sl-color-gray-1);
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th,
+td {
+  border: 0;
+  padding: 0.7rem 0.9rem;
+}
+
+/* Keep every component square, including built-in Starlight surfaces. */
+*,
+*::before,
+*::after {
+  border-color: transparent !important;
+  border-radius: 0 !important;
+}
+
+.search-panel,
+.pagination-links a,
+.tablist,
+code,
+pre {
+  border-color: var(--sl-color-hairline) !important;
+}
+
+.sidebar-content::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+.sidebar-content::-webkit-scrollbar-thumb,
+body::-webkit-scrollbar-thumb {
+  background: rgba(126, 247, 174, 0.28);
+}
+
+.sidebar-content::-webkit-scrollbar-track,
+body::-webkit-scrollbar-track {
+  background: rgba(5, 13, 9, 0.7);
+}
+
+/* Match the rounded corners baked into the landing-page icon asset. */
+.hero img {
+  border-radius: 5% !important;
+}
+
+@media (max-width: 767px) {
+  .sl-markdown-content {
+    padding: 1rem 1.1rem;
+  }
+}

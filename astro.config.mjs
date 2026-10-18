@@ -6,19 +6,22 @@ import starlight from '@astrojs/starlight';
 export default defineConfig({
 	integrations: [
 		starlight({
-			title: 'My Docs',
-			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/withastro/starlight' }],
+			title: 'Memo',
+			customCss: ['./src/styles/main.css'],
+			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/jsah-mc/memo' }],
+			expressiveCode: {
+        		styleOverrides: {
+          			borderRadius: '0rem', // Sets code block corners to square
+       			},
+      		},
 			sidebar: [
 				{
-					label: 'Guides',
+					label: 'Get Started',
 					items: [
 						// Each item here is one entry in the navigation menu.
-						{ label: 'Example Guide', slug: 'guides/example' },
+						{ label: 'Info', slug: 'get-started/info' },
+						{ label: 'Installation', slug: 'get-started/installation' },
 					],
-				},
-				{
-					label: 'Reference',
-					items: [{ autogenerate: { directory: 'reference' } }],
 				},
 			],
 		}),
