@@ -16,47 +16,11 @@
   "dependencies": {
     "@astrojs/cloudflare": "^14.4.0",
     "@astrojs/starlight": "^0.42.6",
-    "@bruits/satteri-wasm32-wasi": "^0.10.5",
+    "@bruits/satteri-wasm32-wasi": "0.10.5",
     "astro": "^7.4.0",
     "sharp": "^0.35.3"
   },
   "devDependencies": {
     "wrangler": "^4.151.1"
-  },
-  "allowScripts": {
-    "esbuild@0.28.2": true,
-    "workerd@1.20261012.1": true,
-    "cookie@2.0.1": true,
-    "common-ancestor-path@2.0.0": true,
-    "i18next@26.4.7": true,
-    "path-to-regexp@6.3.0": true,
-    "tinyexec@1.3.1": true,
-    "yargs-parser@22.0.0": true,
-    "file:../../path-to-regexp@6.3.0/node_modules/path-to-regexp": true,
-    "file:../../workerd@1.20261012.1/node_modules/workerd": true,
-    "file:../../esbuild@0.28.2/node_modules/esbuild": true,
-    "file:../ci-info@4.4.0/node_modules/ci-info": true,
-    "file:../tinyexec@1.3.1/node_modules/tinyexec": true,
-    "file:../undici@7.29.1/node_modules/undici": true,
-    "file:../../common-ancestor-path@2.0.0/node_modules/common-ancestor-path": true,
-    "file:../../cookie@2.0.1/node_modules/cookie": true,
-    "file:../../yargs-parser@22.0.0/node_modules/yargs-parser": true,
-    "file:../../i18next@26.4.7/node_modules/i18next": true,
-    "file:../../css-select@6.0.0/node_modules/css-select": true,
-    "file:../../undici@8.12.2/node_modules/undici": true,
-    "file:../../lru-cache@11.5.3/node_modules/lru-cache": true,
-    "file:../../lightningcss@1.33.0/node_modules/lightningcss": true,
-    "file:../../nth-check@2.1.1/node_modules/nth-check": true,
-    "file:../../sitemap@9.0.1/node_modules/sitemap": true,
-    "file:../../cookie@1.1.1/node_modules/cookie": true,
-    "file:../../domhandler@5.0.3/node_modules/domhandler": true,
-    "file:../../domutils@3.2.2/node_modules/domutils": true,
-    "file:../../../@sindresorhus+is@7.2.0/node_modules/@sindresorhus/is": true,
-    "file:../../domelementtype@2.3.0/node_modules/domelementtype": true,
-    "file:../../dom-serializer@2.0.0/node_modules/dom-serializer": true,
-    "file:../../regex-utilities@2.3.0/node_modules/regex-utilities": true,
-    "file:../../entities@4.5.0/node_modules/entities": true,
-    "file:../../../@ctrl+tinycolor@4.2.1/node_modules/@ctrl/tinycolor": true,
-    "file:../../postcss-selector-parser@6.1.4/node_modules/postcss-selector-parser": true
   }
 }
